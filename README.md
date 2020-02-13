@@ -4,4 +4,4 @@
 
 部分功能做删减，只留主要功能
 
-[演示网站](https://njh.netlify.com/)
+[演示网站](https://yong-s.gitee.io/navigation_jh//)
