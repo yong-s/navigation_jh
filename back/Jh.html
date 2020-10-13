@@ -10,14 +10,19 @@
     <link href="assets/style.css" rel="stylesheet">
     <link href="assets/images/aircraft.png" rel="shortcut icon" type="image/png">
     <link href="assets/images/favicon.ico" rel="apple-touch-icon">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175460382-2"></script>
     <script>
-        window.ga = window.ga || function () {
-            (ga.q = ga.q || []).push(arguments)
-        };
-        ga.l = +new Date;
-        ga('create', 'UA-69454720-6', 'auto');
-        ga('send', 'pageview');
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-175460382-2');
     </script>
+
 
 </head>
 
