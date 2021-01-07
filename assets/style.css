@@ -20,7 +20,7 @@
 		#site-main {
 			max-width: 1200px;
 			margin: 50px auto;
-			background: #000
+			background-color: #000
 		}
 		.search-tab {
 			max-width: 470px;
@@ -35,18 +35,18 @@
 		.search-form input[type=search] {
 			max-width: 470px;
 			width: 74%;
-			background: #000;
+			background-color: #000;
 			overflow: hidden;
 			border: 1px solid #5e6c75
 		}
 		
 		.works {
-			background: #000
+			background-color: #000
 		}
 		.work-link .info a:hover,
 		.work-link .tab span.active,
 		.work-link .tab span:hover {
-			background: #000;
+			background-color: #000;
 			color: #fff
 		}
         
