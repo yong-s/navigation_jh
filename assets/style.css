@@ -9,48 +9,7 @@
 		transform: rotate(360deg)
 	}
 }
-@media (prefers-color-scheme: dark) {
 
-        /* 夜间模式 */
-        body {
-            background-color: black;
-            color: white;
-        }
-
-		#site-main {
-			max-width: 1200px;
-			margin: 50px auto;
-			background-color: #000
-		}
-		.search-tab {
-			max-width: 470px;
-			height: 33px;
-			margin: 0 0 20px;
-			display: flex;
-			align-items: center;
-			flex-direction: row;
-			justify-content: space-between;
-			-webkit-tap-highlight-color: transparent
-		}
-		.search-form input[type=search] {
-			max-width: 470px;
-			width: 74%;
-			background-color: #000;
-			overflow: hidden;
-			border: 1px solid #5e6c75
-		}
-		
-		.works {
-			background-color: #000
-		}
-		.work-link .info a:hover,
-		.work-link .tab span.active,
-		.work-link .tab span:hover {
-			background-color: #000;
-			color: #fff
-		}
-        
-    }
     
 
 html {
