@@ -1365,11 +1365,12 @@ var comm_list = [{
         a(o(this)), e("srch", this.className.split(" ")[0])
     }), o("#setting-icon").on("click", function () {
 		let theme = document.getElementById("site-main").style.mixBlendMode
-		if (theme == '') {
-			document.getElementById("site-main").style.mixBlendMode = "difference"
+		console.log(theme)
+		if (theme == '' || theme == 'difference') {
+			document.getElementById("site-main").style.mixBlendMode = "normal"
 		}
 		else(
-			document.getElementById("site-main").style.mixBlendMode = ""
+			document.getElementById("site-main").style.mixBlendMode = "difference"
 		)
 		
 	})
