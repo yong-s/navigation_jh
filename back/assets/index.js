@@ -1364,22 +1364,13 @@ var comm_list = [{
     }), o(".search-tab").on("click", "span", function () {
         a(o(this)), e("srch", this.className.split(" ")[0])
     }), o("#setting-icon").on("click", function () {
-        o(".work-link .info").hide().html('<div style="padding: 30px 30px 0;min-height: 400px;"><div class="row"><div id="setting-bkgd"class="column col-4"><label>站点背景</label><select><option value="#ededed">山雾</option><option value="#ffffff">素白</option><option value="#f5d9d9">桃夭</option><option value="#8d6262">荔枝</option><option value="#b9d7ea">天色</option><option value="#aacfd0">青川</option><option value="#283c63">深海</option><option value="#928a97">陆离</option><option value="#444f5a">青纯</option><option value="#373c38">石墨</option><option value="#40514e">月夜</option><option value="#4d4545">消炭</option></select></div><div class="column col-4"></div></div><div class="row"><input id="setting-save"type="button"value="保存"style="padding: 0 40px;"></div></div>').fadeIn(200), o("#setting-bkgd select").val(i("bkgd")), o("#setting-schl select").val(i("schl")), o("#setting-prov select").val(i("prov")), o("#setting-bkgd select").change(function () {
-            n(o(this).val())
-        }), o.getScript("assets/data/univ.li.js", function () {
-            function t(t, i) {
-                var e, n;
-                o.each(univ_list, function (a, l) {
-                    t == l.id && (e = l.univs, n = "", o.each(e, function (o, t) {
-                        n += "<option value=" + t.id + ">" + t.name + "</option>"
-                    }), o("#setting-univ select").html(n), i && o("#setting-univ select").val(i))
-                })
-            }
-            t(o("#setting-prov select").val(), i("univ")), o("#setting-prov select").change(function () {
-                t(o("#setting-prov select").val())
-            })
-        }), o("#setting-save").off("click").on("click", function () {
-            e("bkgd", o("#setting-bkgd select").val()), e("schl", o("#setting-schl select").val()), o("#setting-univ select").val() && (e("prov", o("#setting-prov select").val()), e("univ", o("#setting-univ select").val())), t(o(".work-link").find(".tab span:first"))
-        })
-    })
+		let theme = document.getElementById("site-main").style.mixBlendMode
+		if (theme == '') {
+			document.getElementById("site-main").style.mixBlendMode = "difference"
+		}
+		else(
+			document.getElementById("site-main").style.mixBlendMode = ""
+		)
+		
+	})
 }(jQuery);

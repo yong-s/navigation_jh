@@ -25,51 +25,6 @@
 
 
 </head>
-<style type="text/css">
-	@media (prefers-color-scheme: dark) {
-	
-	        /* 夜间模式 */
-	        body {
-	            background-color: black;
-	            color: white;
-	        }
-	
-			#site-main {
-				max-width: 1200px;
-				margin: 50px auto;
-				background-color: #000
-			}
-			.search-tab {
-				max-width: 470px;
-				height: 33px;
-				margin: 0 0 20px;
-				display: flex;
-				align-items: center;
-				flex-direction: row;
-				justify-content: space-between;
-				-webkit-tap-highlight-color: transparent
-			}
-			.search-form input[type=search] {
-				max-width: 470px;
-				width: 74%;
-				background-color: #000;
-				overflow: hidden;
-				border: 1px solid #5e6c75
-			}
-			
-			.works {
-				background-color: #000
-			}
-			.work-link .info a:hover,
-			.work-link .tab span.active,
-			.work-link .tab span:hover {
-				background-color: #000;
-				color: #fff
-			}
-	        
-	    }
-</style>
-
 <body style="background: rgb(237, 237, 237);">
     <div id="site-main">
         <div id="main-overlay"></div>
@@ -93,7 +48,7 @@
                 <div class="container">
                     <div class="tab"><span class="common active">常用</span> <span class="amuse">娱乐</span> <span
                             class="study">学习</span> <span class="life">生活</span> <span class="tech">技术</span> <span
-                            class="design">设计</span>
+                            class="design">设计</span><i class="icon-cog" id="setting-icon"></i>
                     </div>
                     <div class="info">
                         <ul>
@@ -183,6 +138,7 @@
     </div>
     <script src="assets/main.js"></script>
     <script src="assets/index.js"></script>
+	
 </body>
 
 </html>
