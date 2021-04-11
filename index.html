@@ -2,6 +2,8 @@
 <html lang="zh-CN">
 
 <head>
+    <link rel="manifest" href="manifest.json">
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>简航</title>
     <meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport">
@@ -10,6 +12,19 @@
     <link href="assets/style.css" rel="stylesheet">
     <link href="assets/images/aircraft.png" rel="shortcut icon" type="image/png">
     <link href="assets/images/favicon.ico" rel="apple-touch-icon">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="简航">
+    <meta name="apple-mobile-web-app-title" content="简航">
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/navigation_jh/index.html">
+    
+    <link rel="icon" type="image/png" sizes="128x128" href="assets\images\aircraft.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="assets\images\aircraft.png">
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175460382-2"></script>
     <script>
@@ -138,6 +153,15 @@
     </div>
     <script src="assets/main.js"></script>
     <script src="assets/index.js"></script>
+    <script>
+        // 检测浏览器是否支持SW
+        if(navigator.serviceWorker != null){
+          navigator.serviceWorker.register('sw.js')
+          .then(function(registartion){
+            console.log('支持sw:',registartion.scope)
+          })
+        }
+      </script>
 	
 </body>
 

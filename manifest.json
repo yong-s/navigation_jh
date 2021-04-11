@@ -1,0 +1,16 @@
+{
+    "name": "简航",
+    "short_name": "简航",
+    "lang": "zh-CN",
+    "start_url": "/navigation_jh/index.html",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "icons": [
+      {
+        "src": "assets/images/aircraft.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      }
+    ]
+  }
