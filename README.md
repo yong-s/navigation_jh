@@ -5,3 +5,6 @@
 部分功能做删减，只留主要功能
 
 [演示网站](https://yong-s.gitee.io/navigation_jh//)
+
+### 2021-04-11
+支持pwa
