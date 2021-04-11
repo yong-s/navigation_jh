@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 
 <head>
+    <link rel="manifest" href="manifest.json">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>简航</title>
     <meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport">
     <meta content="" name="description">
     <meta content="" name="keywords">
     <link href="assets/style.css" rel="stylesheet">
-    <link href="assets/images/aircraft.png" rel="shortcut icon" type="image/png">
-    <link href="assets/images/favicon.ico" rel="apple-touch-icon">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="简航">
+    <meta name="apple-mobile-web-app-title" content="简航">
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-starturl" content="/navigation_jh/index.html">
+    <link rel="icon" type="image/png" sizes="128x128" href="assets/images/icon-128x128.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="128x128" href="assets/images/icon-128x128.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="assets/images/icon-144x144.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="assets/images/icon-192x192.png">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175460382-2"></script>
     <script>
@@ -19,27 +30,22 @@
             dataLayer.push(arguments);
         }
         gtag('js', new Date());
-
         gtag('config', 'UA-175460382-2');
     </script>
-
-
 </head>
+
 <body style="background: rgb(237, 237, 237);">
     <div id="site-main">
         <div id="main-overlay"></div>
         <div class="headline search-bar">
             <div class="container">
                 <div class="headline-content">
-                    <div class="search-tab">
-                        <span class="DuckGo active">DuckGo</span>
-                        <span class="baidu">百度</span> <span class="google">谷歌</span> <span class="bing">必应</span> <span
-                            class="image">图片</span> <span class="torrent">种子</span> <span class="scholar">学术</span>
-                    </div>
+                    <div class="search-tab"> <span class="DuckGo active">DuckGo</span> <span class="baidu">百度</span>
+                        <span class="google">谷歌</span> <span class="bing">必应</span> <span class="image">图片</span> <span
+                            class="torrent">种子</span> <span class="scholar">学术</span> </div>
                     <form class="search-form" target="_blank" action="https://duckduckgo.com/"><input
                             class="float-left search-keyword" type="search" autocomplete="off" autofocus="" name="q"
                             placeholder="DuckDuckGo"> <input class="float-right" type="submit" value="搜索"></form>
-
                 </div>
             </div>
         </div>
@@ -48,8 +54,7 @@
                 <div class="container">
                     <div class="tab"><span class="common active">常用</span> <span class="amuse">娱乐</span> <span
                             class="study">学习</span> <span class="life">生活</span> <span class="tech">技术</span> <span
-                            class="design">设计</span><i class="icon-cog" id="setting-icon"></i>
-                    </div>
+                            class="design">设计</span><i class="icon-cog" id="setting-icon"></i> </div>
                     <div class="info">
                         <ul>
                             <li>热门</li>
@@ -138,7 +143,15 @@
     </div>
     <script src="assets/main.js"></script>
     <script src="assets/index.js"></script>
-	
+    <script>
+        /* 检测浏览器是否支持SW */
+        if(navigator.serviceWorker != null){
+          navigator.serviceWorker.register('sw.js')
+          .then(function(registartion){
+            console.log('支持sw:',registartion.scope)
+          })
+        }
+      </script>
 </body>
 
 </html>
